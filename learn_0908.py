@@ -11,13 +11,13 @@ print("Tupla = ", tupla)
 print("id = ", id(tupla))
 print()
 
-#um unico valor não é uma tupla
+#Um unico valor não é uma TUPLA
 t_1 = (1)
 print(t_1)
 print( type(t_1))
 print()
 
-#ao adicionar uma virgula passa a ser uma tupla. ex: t_1 = (1, )
+#Ao adicionar uma virgula passa a ser uma TUPLA. ex: t_1 = (1, )
 t_1 = (1, )
 print(t_1)
 print( type(t_1))
@@ -30,13 +30,13 @@ print()
 
 tupla = (1, 'a', 2, 'Brasil', 3.14)
 
-#executa uma varredura nos items do array
+#Executa uma varredura nos items do ARRAY
 for i in tupla:
     print(i)
 
 print()
 
-#executa uma estrutura de array| acesso nome[indice]
+#Executa uma estrutura de ARRAY | acesso nome[indice]
 for i in range(0, len(tupla)):
     print(tupla[i])
 
@@ -47,16 +47,16 @@ print()
 print("x = ", x)
 print("y = ", y)
 
-#trocando valores de variaveis
+#Trocando valores de VARIAVEIS
 x, y = y, x
-#ou usando uma variavel auxiliar
+#Ou usando uma variavel auxiliar
 
 print()
 print("x = ", x)
 print("y = ", y)
 print()
 
-#retorno multiplos
+#Retorno multiplos
 def divisao(x, y):
     q = x // y
     r = x % y
@@ -79,3 +79,30 @@ d = 4
 print(n, '//',d,'=', rest_int)
 print(n, '%',d,'=', resto)
 print()
+
+#Tratamento de ARRAY
+def get_Idades(aTupla):
+    idades = ()
+    nomes = ()
+
+    for t in aTupla:
+        idades = idades + (t[0],)
+        nomes = nomes + (t[1],)
+
+    mais_jovem = min(idades)
+    mais_velho = max(idades)
+    num_pessoas = len(nomes)
+
+    return (mais_jovem, mais_velho, num_pessoas)
+
+relacao = ((15, 'Joana'), 
+        (35, 'Pedro'), 
+        (54, 'Claudiney'), 
+        (27, 'Sofia'),
+        (10, 'Ana'))
+
+(jovem, idoso, pessoas) = get_Idades(relacao)
+
+print(jovem)
+print(idoso)
+print(pessoas)
